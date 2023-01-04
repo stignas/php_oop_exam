@@ -15,5 +15,5 @@ try {
     $router = $container->get('eas\Router\Router');
     $router->process($route);
 } catch (Exception $e) {
-    echo $e->getMessage();
+   echo $e->getMessage();
 }

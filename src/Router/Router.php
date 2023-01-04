@@ -5,6 +5,7 @@ namespace eas\Router;
 
 use eas\Container\DiContainer;
 use eas\Controllers\HomePageController;
+use eas\Models\InputHandler;
 use Exception;
 
 class Router
@@ -13,24 +14,20 @@ class Router
     {
     }
 
-    /**
-     * @throws Exception
-     */
     public function process(string $route): void
     {
         /* @var HomePageController $HomePageController
+         * @var InputHandler $InputController
          */
         $HomePageController = $this->container->get('eas\Controllers\HomePageController');
+        $InputController = $this->container->get('eas\Controllers\InputController');
 
         switch ($route) {
             case '/':
                 $HomePageController->index();
                 break;
-            case '/forma':
-                // formos kontroleris
-                break;
-            case '/rezultatai':
-                // rezultatu kontroleris
+            case '/submit.php':
+                $InputController->process();
                 break;
             default:
                 http_response_code(404);
