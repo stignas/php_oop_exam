@@ -2,7 +2,7 @@
 
 // Source: https://gist.github.com/MustafaMagdi/2bb27aebf6ab078b1f3e5635c0282fac
 
-namespace EAS\Container;
+namespace eas\Container;
 
 use Exception, Closure, ReflectionClass;
 
