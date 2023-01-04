@@ -1,0 +1,15 @@
+{
+    "name": "statk/php_oop_exam",
+    "description": "PHP egazmino u\u0000duotis. Elektros apskaitos sistema.",
+    "autoload": {
+        "psr-4": {
+            "EAS\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ignas Statkus"
+        }
+    ],
+    "require": {}
+}
