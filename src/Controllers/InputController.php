@@ -19,7 +19,7 @@ class InputController
         /* @var InputHandler $inputHandler
          */
         try {
-            $inputHandler = $this->container->get('eas\Models\InputHandler');
+            $inputHandler = $this->container->get('eas\Handlers\InputHandler');
             $inputHandler->process();
 
             /*
