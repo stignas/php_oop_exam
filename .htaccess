@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /paskaitos/OOP/PHP_OOP_EXAM/
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php [QSA,L]
+RedirectMatch 403 ^/paskaitos/OOP/PHP_OOP_EXAM/src/.*$
+#RedirectMatch 403 ^/paskaitos/OOP/PHP_OOP_EXAM/views/.*$
+RedirectMatch 403 ^/paskaitos/OOP/PHP_OOP_EXAM/vendor/.*$
