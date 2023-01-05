@@ -16,7 +16,6 @@ class InputExceptions extends Exception
 
     public function getMsg(): string
     {
-        $_POST['error_msg'] = $this->message;
         return $this->message;
     }
 
