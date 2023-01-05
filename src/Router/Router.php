@@ -5,8 +5,10 @@ namespace eas\Router;
 
 use eas\Container\DiContainer;
 use eas\Controllers\HomePageController;
-use eas\Models\InputHandler;
+use eas\Controllers\InputController;
+use eas\Controllers\ReportController;
 use Exception;
+
 
 class Router
 {
@@ -14,24 +16,35 @@ class Router
     {
     }
 
+    /**
+     * @throws Exception
+     */
     public function process(string $route): void
     {
-        /* @var HomePageController $HomePageController
-         * @var InputHandler $InputController
+        /* @var HomePageController $homePageController
+         * @var InputController $inputController
+         * @var ReportController $reportController
          */
-        $HomePageController = $this->container->get('eas\Controllers\HomePageController');
-        $InputController = $this->container->get('eas\Controllers\InputController');
+        $homePageController = $this->container->get('eas\Controllers\HomePageController');
+        $inputController = $this->container->get('eas\Controllers\InputController');
+        $reportController = $this->container->get('eas\Controllers\ReportController');
 
         switch ($route) {
             case '/':
-                $HomePageController->index();
+                $homePageController->index();
                 break;
-            case '/submit.php':
-                $InputController->process();
+            case '/submit.form':
+                $inputController->process();
+                break;
+            case '/report':
+                $reportController->createReport();
+                break;
+            case '/pay.money':
+                $inputController->pay();
                 break;
             default:
                 http_response_code(404);
-                $HomePageController->error();
+                $homePageController->error();
                 break;
         }
     }
