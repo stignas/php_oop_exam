@@ -26,9 +26,6 @@ class InputController
             $data = $inputHandler->setInputData($_POST);
             $this->container->get('eas\Handlers\FileHandler')->addEntryToFile($data);
             header('Location: ' . $_SERVER['REQUEST_URI'] . '/../report');
-        } catch (InputExceptions $e) {
-            $message = $e->getMsg() . PHP_EOL;
-            require __DIR__ . '/../../views/index.tpl';
         } catch (Exception $e) {
             $message = $e->getMessage() . PHP_EOL;
             require __DIR__ . '/../../views/index.tpl';
