@@ -20,6 +20,7 @@ class ReportHandler
     {
         $data = $this->container->get('eas\Handlers\FileHandler')->getData();
         $paymentsArray = [];
+        // Atvaizdavimui atrenkam tik neapmokėtus įrašus.
         foreach ($data as $payment) {
             if ($payment['status'] === 'NotPaid') {
                 $paymentObj = match ($payment['rate']) {
@@ -30,12 +31,12 @@ class ReportHandler
                 $paymentObj->setQuantity((float)$payment['quantity']);
                 $paymentObj->setPriceRate((float)$payment['price_rate']);
                 $paymentObj->setMonth(date('F', strtotime($payment['month'] . "-01")));
-                $paymentObj->setStatus('Neapmokėta');
+                $paymentObj->setStatus('Neapmokėta'); // Atvaizdavimui užsetinam lietuviškai.
                 $paymentsArray[] = $paymentObj;
             }
         }
         if (count($paymentsArray) < 1) {
-            throw new Exception('Neapmokėtų sąskaitų nėra (ReportHandler)');
+            throw new Exception('Neapmokėtų sąskaitų nėra.');
         }
         return $paymentsArray;
     }

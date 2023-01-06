@@ -17,11 +17,13 @@ class FileHandler
         return $array;
     }
 
+    // Atnaujina visus įrašus.
     public function updateJsonPaymentStatus(array $data): void
     {
         file_put_contents(self::PATH, json_encode($data, JSON_PRETTY_PRINT));
     }
 
+    // Prideda vieną įrašą paimtą iš input.
     public function addEntryToFile(array $data): void
     {
         $array = $this->getData();
