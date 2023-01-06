@@ -1,154 +1,28 @@
 [
     {
-        "quantity": "120",
-        "price_rate": "0.12",
-        "rate": "night",
-        "status": "Paid",
-        "month": "2022-12"
-    },
-    {
-        "quantity": "150",
-        "price_rate": "0.12",
+        "quantity": "123",
+        "price_rate": "0.13",
         "rate": "day",
         "status": "Paid",
         "month": "2022-12"
     },
     {
-        "quantity": "123.124",
-        "price_rate": "0.125",
-        "rate": "night",
-        "status": "Paid",
-        "month": "2022-12"
-    },
-    {
-        "quantity": "150",
-        "price_rate": "0.15",
+        "quantity": "125",
+        "price_rate": "0.25",
         "rate": "day",
-        "status": "Paid",
+        "status": "NotPaid",
         "month": "2022-12"
     },
     {
-        "quantity": "150",
-        "price_rate": "0.12",
-        "rate": "day",
-        "status": "Paid",
-        "month": "2022-12"
-    },
-    {
-        "quantity": "468",
-        "price_rate": "0.28",
-        "rate": "day",
-        "status": "Paid",
-        "month": "2022-12"
-    },
-    {
-        "quantity": "150",
-        "price_rate": "0.125",
-        "rate": "day",
-        "status": "Paid",
-        "month": "2022-12"
-    },
-    {
-        "quantity": "1582",
-        "price_rate": "0.125",
-        "rate": "night",
-        "status": "Paid",
-        "month": "2022-12"
-    },
-    {
-        "quantity": "486.568",
-        "price_rate": "0.285",
-        "rate": "day",
-        "status": "Paid",
-        "month": "2022-12"
-    },
-    {
-        "quantity": "159",
-        "price_rate": "0.125",
-        "rate": "night",
-        "status": "Paid",
-        "month": "2022-12"
-    },
-    {
-        "quantity": "496.9",
+        "quantity": "250",
         "price_rate": "0.24",
         "rate": "day",
-        "status": "Paid",
+        "status": "NotPaid",
         "month": "2022-12"
     },
     {
-        "quantity": "232",
-        "price_rate": "0.21",
-        "rate": "night",
-        "status": "Paid",
-        "month": "2022-12"
-    },
-    {
-        "quantity": "150",
-        "price_rate": "0.156",
-        "rate": "night",
-        "status": "Paid",
-        "month": "2022-09"
-    },
-    {
-        "quantity": "150",
-        "price_rate": "0.156",
-        "rate": "night",
-        "status": "Paid",
-        "month": "2022-09"
-    },
-    {
-        "quantity": "150",
-        "price_rate": "0.28",
-        "rate": "day",
-        "status": "Paid",
-        "month": "2022-11"
-    },
-    {
-        "quantity": "15602",
-        "price_rate": "0.125",
-        "rate": "day",
-        "status": "Paid",
-        "month": "2022-11"
-    },
-    {
         "quantity": "123",
-        "price_rate": "0.1",
-        "rate": "day",
-        "status": "Paid",
-        "month": "2022-11"
-    },
-    {
-        "quantity": "123",
-        "price_rate": "123",
-        "rate": "day",
-        "status": "Paid",
-        "month": "2022-11"
-    },
-    {
-        "quantity": "123",
-        "price_rate": "123",
-        "rate": "day",
-        "status": "Paid",
-        "month": "2022-11"
-    },
-    {
-        "quantity": "123",
-        "price_rate": "123",
-        "rate": "day",
-        "status": "Paid",
-        "month": "2022-11"
-    },
-    {
-        "quantity": "123",
-        "price_rate": "123",
-        "rate": "day",
-        "status": "Paid",
-        "month": "2022-12"
-    },
-    {
-        "quantity": "486",
-        "price_rate": "0.28",
+        "price_rate": "0.12",
         "rate": "day",
         "status": "NotPaid",
         "month": "2022-12"

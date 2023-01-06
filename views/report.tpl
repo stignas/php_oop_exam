@@ -49,9 +49,9 @@
     <tr>
         <th>Mėnuo</th>
         <th>Suvartota, kWh</th>
-        <th>Mokėjimo tarifas, €</th>
+        <th>Kaina už vieną kWh, €</th>
         <th>Tarifas</th>
-        <th>Suma</th>
+        <th>Suma, €</th>
         <th>Statusas</th>
     </tr>
     <?php if(isset($payments)): ?>

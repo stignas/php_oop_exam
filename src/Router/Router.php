@@ -33,12 +33,14 @@ class Router
             case '/':
                 $homePageController->index();
                 break;
+            // Paspaudus 'Skaičiuoti kainą' įvedimo formoje, nukreipiam į reikiamą kontrolerį.
             case '/submit.form':
-                $inputController->process();
+                $inputController->processInput();
                 break;
             case '/report':
                 $reportController->createReport();
                 break;
+            // Paspaudus 'Deklaruoti ir apmokėti" ataskaitoje, nukreipiam į reikiamą kontrolerį.
             case '/pay.money':
                 $inputController->pay();
                 break;

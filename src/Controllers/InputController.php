@@ -16,29 +16,35 @@ class InputController
     {
     }
 
-    public function process(): void
+    public function processInput(): void
     {
         /* @var InputHandler $inputHandler
          */
         try {
             $inputHandler = $this->container->get('eas\Handlers\InputHandler');
             $inputHandler->checkDate();
-            $data = $inputHandler->setInputData($_POST);
-            $this->container->get('eas\Handlers\FileHandler')->addEntryToFile($data);
+            /* Jeigu įvesta neteisinga data,  toliau vykdomas "catch" blokas.
+            Jeigu įvesta teisinga data, duomenys paruošiami ir įrašomi į failą.
+            */
+            $InputData = $inputHandler->setInputData($_POST);
+            $this->container->get('eas\Handlers\FileHandler')->addEntryToFile($InputData);
+            /* Nukreipiam į ataskaitą neperduodami jokių duomenų.
+               Routeris nukreipa į Report Controller, kuris sugeneruoja ataskaitą iš failo.
+            */
             header('Location: ' . $_SERVER['REQUEST_URI'] . '/../report');
         } catch (Exception $e) {
             $message = $e->getMessage() . PHP_EOL;
+            // Gautą error message perduodam į index view informuoti vartotoją.
             require __DIR__ . '/../../views/index.tpl';
         }
     }
 
     /**
      * @throws Exception
-     * @var FileHandler $fileHandler
      */
     public function pay(): void
     {
         $this->container->get('eas\Handlers\InputHandler')->setPaid();
-        header('Location: ' . $_SERVER['REQUEST_URI'] . '/../');
+        require __DIR__ . '/../../views/index.tpl';
     }
 }
