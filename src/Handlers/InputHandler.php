@@ -6,7 +6,6 @@ namespace eas\Handlers;
 use DateTime;
 use eas\Container\DiContainer;
 use eas\Exceptions\InputExceptions;
-use eas\Interfaces\PaymentDeclarationInterface;
 use Exception;
 
 class InputHandler
